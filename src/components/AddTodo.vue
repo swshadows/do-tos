@@ -20,20 +20,25 @@ export default {
     const add = ref(false);
     const title = ref("");
     const body = ref("");
-    const toDos = ref(JSON.parse(localStorage.toDos) || []);
 
     const handleSubmit = () => {
       if (title.value && body.value) {
-        const todo = { title: title.value, body: body.value, id: toDos.value.length };
-        toDos.value.push(todo);
-        window.localStorage.setItem("toDos", JSON.stringify(toDos.value));
-        emit("updateLS", toDos.value);
+        const toDos = JSON.parse(localStorage.toDos);
+        const todo = {
+          id: toDos.length,
+          title: title.value,
+          body: body.value,
+          completed: false,
+        };
+        toDos.push(todo);
+        localStorage.toDos = JSON.stringify(toDos);
+        emit("updateLS");
       }
       title.value = "";
       body.value = "";
     };
 
-    return { title, body, toDos, handleSubmit, add };
+    return { title, body, handleSubmit, add };
   },
 };
 </script>
