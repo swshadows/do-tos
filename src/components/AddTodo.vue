@@ -1,14 +1,12 @@
 <template>
-  <div v-if="add">
-    <form @submit.prevent="handleSubmit">
-      <input type="text" placeholder="Titulo" v-model="title" />
-      <textarea v-model="body" placeholder="Corpo"> </textarea>
+  <div class="addNew">
+    <form @submit.prevent="handleSubmit" v-if="add">
+      <input type="text" placeholder="Titulo da tarefa" v-model="title" />
+      <textarea placeholder="Descrição da tarefa" v-model="body"> </textarea>
       <button>Adicionar novo to-do</button>
       <button class="minus" @click="add = !add">Fechar</button>
     </form>
-  </div>
-  <div class="addNew" v-else>
-    <button @click="add = !add">Adicionar novo to-do</button>
+    <button @click="add = !add" v-else>Adicionar novo to-do</button>
   </div>
 </template>
 
@@ -46,8 +44,8 @@ export default {
 <style scoped>
 form {
   display: flex;
-  padding: 10px;
   margin: 0 auto;
+  width: 100%;
   flex-direction: column;
   gap: 10px;
 }
@@ -83,7 +81,7 @@ button.minus:hover {
 }
 .addNew {
   display: flex;
-  padding: 10px;
+  margin-top: 10px;
   flex-direction: column;
 }
 </style>

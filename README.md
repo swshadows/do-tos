@@ -1,24 +1,26 @@
 # do-tos
 
-## Project setup
-```
-yarn install
-```
+<div align='center'>
+    <img src="./public/favicon.png" width=100>
+    <p>🎈 Uma lista de tarefas carismática ✅</p>
+</div>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Inicialização
 
-### Compiles and minifies for production
-```
-yarn build
-```
+<div align=center>
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Requisitos
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Node.js (NPM)](https://nodejs.org/en/)
+
+</div>
+
+- Use os comandos para clonar o repositório
+
+  ```
+    git clone https://github.com/swshadows/do-tos.git
+    cd do-tos
+  ```
+
+- Baixe as requisições do projeto com o comando `yarn install` (ou `npm install`)
+- Inicialize o projeto com o comando `yarn serve` (ou `npm run serve`)

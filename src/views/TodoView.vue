@@ -1,6 +1,6 @@
 <template>
   <div v-if="thisTodo[0]">
-    <router-link :to="{ name: 'home' }">Voltar ao inicio</router-link>
+    <router-link :to="{ name: 'app' }">Voltar à lista</router-link>
     <h1>{{ thisTodo[0].title }}</h1>
     <p>
       <span>Status: </span>
